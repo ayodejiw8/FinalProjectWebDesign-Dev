@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathFlow Pro: Advanced Algebra & Functions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f1f5f9;
+            color: #0f172a;
+        }
+
+        .sidebar-link {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem;
+            margin-bottom: 0.25rem;
+            border-radius: 0.75rem;
+            color: #94a3b8;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .sidebar-link:hover,
+        .sidebar-link:focus-visible {
+            background-color: #4f46e5;
+            color: #ffffff;
+            outline: none;
+        }
+
+        .active-link {
+            background-color: #4f46e5;
+            color: #ffffff;
+            box-shadow: 0 10px 20px rgba(79, 70, 229, 0.25);
+        }
+    </style>
+</head>
+<body class="flex min-h-screen">
+    <aside class="hidden h-screen w-64 flex-shrink-0 flex-col bg-slate-900 p-6 lg:flex">
+        <h1 class="mb-10 text-2xl font-black tracking-tight text-white">MATHFLOW <span class="text-indigo-500">PRO</span></h1>
+        <nav class="flex-1 overflow-y-auto" aria-label="Primary">
+            <a href="#factoring" class="sidebar-link"><i class="fa-solid fa-scissors mr-3 w-4"></i>Factoring & Solving</a>
+            <a href="#complex-equations" class="sidebar-link"><i class="fa-solid fa-square-root-variable mr-3 w-4"></i>Complex Equations</a>
+            <a href="#transformations" class="sidebar-link active-link"><i class="fa-solid fa-wand-magic-sparkles mr-3 w-4"></i>Transformations</a>
+            <a href="#log-exp" class="sidebar-link"><i class="fa-solid fa-infinity mr-3 w-4"></i>Logs & Exponents</a>
+            <a href="#matrices" class="sidebar-link"><i class="fa-solid fa-table-cells mr-3 w-4"></i>Matrices & Systems</a>
+            <a href="#sequences" class="sidebar-link"><i class="fa-solid fa-arrow-right-arrow-left mr-3 w-4"></i>Sequences & Series</a>
+        </nav>
+    </aside>
+
+    <main class="flex-1 space-y-16 overflow-y-auto p-8 lg:p-12">
+        <header class="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
+            <div>
+                <h2 class="text-3xl font-black text-slate-800">The Advanced Lab</h2>
+                <p class="text-slate-500">Master non-linear structures and mathematical reasoning.</p>
+            </div>
+            <div class="rounded-full bg-indigo-100 px-4 py-2 text-xs font-bold uppercase tracking-widest text-indigo-700">
+                Mastery Level: Advanced
+            </div>
+        </header>
+
+        <section id="factoring" class="grid gap-8 md:grid-cols-2">
+            <article class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
+                <h3 class="mb-4 text-xl font-bold">Factoring & Solving</h3>
+                <div class="space-y-4 text-sm text-slate-600">
+                    <div class="rounded-xl border-l-4 border-indigo-500 bg-slate-50 p-4">
+                        <strong class="text-slate-800">Quadratic:</strong> Use the quadratic formula
+                        <code class="rounded bg-slate-100 px-1 py-0.5">x = (-b +/- sqrt(b^2 - 4ac)) / (2a)</code>
+                        when factoring fails.
+                    </div>
+                    <div class="rounded-xl border-l-4 border-purple-500 bg-slate-50 p-4">
+                        <strong class="text-slate-800">Rational:</strong> Find common denominators and always verify
+                        solutions to eliminate extraneous values.
+                    </div>
+                    <div class="rounded-xl border-l-4 border-pink-500 bg-slate-50 p-4">
+                        <strong class="text-slate-800">Radical:</strong> Isolate the radical, square carefully, then
+                        check solutions in the original equation.
+                    </div>
+                </div>
+            </article>
+
+            <article id="log-exp" class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
+                <h3 class="mb-4 text-xl font-bold text-indigo-600">Logarithm Rulebook</h3>
+                <p class="mb-4 text-sm italic text-slate-500">Logs are exponents in another form.</p>
+                <div class="grid grid-cols-1 gap-4 text-xs font-mono sm:grid-cols-2">
+                    <div class="rounded-lg bg-indigo-50 p-3">log(ab) = log(a) + log(b)</div>
+                    <div class="rounded-lg bg-indigo-50 p-3">log(a/b) = log(a) - log(b)</div>
+                    <div class="rounded-lg bg-indigo-50 p-3">log(a^n) = n * log(a)</div>
+                    <div class="rounded-lg bg-indigo-50 p-3">log_b(x) = log_c(x) / log_c(b)</div>
+                </div>
+            </article>
+        </section>
+
+        <section id="complex-equations" class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
+            <h3 class="mb-4 text-xl font-bold">Complex Equations</h3>
+            <p class="mb-4 text-sm text-slate-600">
+                Build a repeatable workflow: simplify terms, isolate expressions, apply inverse operations, and verify
+                the solution set within the original domain.
+            </p>
+            <div class="grid gap-4 text-sm text-slate-700 md:grid-cols-3">
+                <div class="rounded-xl bg-slate-50 p-4">
+                    <h4 class="mb-2 font-semibold text-slate-800">1) Standardize</h4>
+                    <p>Rewrite radicals, logs, and fractions into consistent algebraic forms.</p>
+                </div>
+                <div class="rounded-xl bg-slate-50 p-4">
+                    <h4 class="mb-2 font-semibold text-slate-800">2) Solve Strategically</h4>
+                    <p>Choose elimination, substitution, or transformation based on structure.</p>
+                </div>
+                <div class="rounded-xl bg-slate-50 p-4">
+                    <h4 class="mb-2 font-semibold text-slate-800">3) Validate</h4>
+                    <p>Check for domain violations and remove any non-valid solutions.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="transformations" class="rounded-[3rem] border border-indigo-50 bg-white p-8 shadow-xl md:p-12">
+            <div class="flex flex-col gap-12 xl:flex-row">
+                <div class="xl:w-1/3">
+                    <h3 class="mb-6 text-2xl font-bold">Function Transformer</h3>
+                    <p class="mb-8 text-sm text-slate-500">
+                        Explore the parent function <code class="rounded bg-slate-100 px-1 py-0.5">f(x) = x^2</code>
+                        by adjusting the transformation model
+                        <code class="rounded bg-slate-100 px-1 py-0.5">y = a(x - h)^2 + k</code>.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div>
+                            <label for="aIn" class="text-xs font-bold uppercase text-indigo-600">
+                                Vertical Stretch (a): <span id="aVal">1</span>
+                            </label>
+                            <input type="range" id="aIn" min="-3" max="3" step="0.1" value="1" class="mt-2 w-full appearance-none rounded-lg bg-slate-200 accent-indigo-600">
+                        </div>
+                        <div>
+                            <label for="hIn" class="text-xs font-bold uppercase text-indigo-600">
+                                Horizontal Shift (h): <span id="hVal">0</span>
+                            </label>
+                            <input type="range" id="hIn" min="-5" max="5" step="1" value="0" class="mt-2 w-full appearance-none rounded-lg bg-slate-200 accent-indigo-600">
+                        </div>
+                        <div>
+                            <label for="kIn" class="text-xs font-bold uppercase text-indigo-600">
+                                Vertical Shift (k): <span id="kVal">0</span>
+                            </label>
+                            <input type="range" id="kIn" min="-5" max="5" step="1" value="0" class="mt-2 w-full appearance-none rounded-lg bg-slate-200 accent-indigo-600">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative h-[400px] rounded-3xl bg-slate-50 p-6 xl:w-2/3">
+                    <div class="absolute right-8 top-4 font-mono text-lg font-bold text-indigo-600" id="transEq">y = 1(x - 0)^2 + 0</div>
+                    <canvas id="transChart" aria-label="Transformation graph" role="img"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid gap-8 md:grid-cols-2">
+            <article id="matrices" class="rounded-[2rem] bg-slate-900 p-8 text-white shadow-2xl">
+                <h3 class="mb-4 flex items-center text-xl font-bold text-indigo-400">
+                    <i class="fa-solid fa-table-cells mr-3"></i>Matrices & Systems
+                </h3>
+                <p class="mb-6 text-sm text-slate-400">
+                    Solve linear systems with substitution, elimination, or Cramer's Rule using determinants.
+                </p>
+                <div class="rounded-xl bg-slate-800 p-4 font-mono text-xs text-indigo-300">
+                    [A][X] = [B]<br>
+                    X = A^-1 * B
+                </div>
+            </article>
+
+            <article id="sequences" class="rounded-[2rem] bg-indigo-600 p-8 text-white shadow-2xl">
+                <h3 class="mb-4 flex items-center text-xl font-bold">
+                    <i class="fa-solid fa-list-ol mr-3"></i>Sequences & Series
+                </h3>
+                <div class="space-y-4">
+                    <div class="rounded-lg border border-indigo-400/30 bg-indigo-700/50 p-3">
+                        <p class="text-xs font-bold uppercase opacity-70">Arithmetic Sum</p>
+                        <p class="font-mono text-sm">S_n = (n / 2)(a_1 + a_n)</p>
+                    </div>
+                    <div class="rounded-lg border border-indigo-400/30 bg-indigo-700/50 p-3">
+                        <p class="text-xs font-bold uppercase opacity-70">Geometric Infinite Sum</p>
+                        <p class="font-mono text-sm">S_inf = a_1 / (1 - r), for |r| &lt; 1</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        (function () {
+            const aInput = document.getElementById("aIn");
+            const hInput = document.getElementById("hIn");
+            const kInput = document.getElementById("kIn");
+            const aValue = document.getElementById("aVal");
+            const hValue = document.getElementById("hVal");
+            const kValue = document.getElementById("kVal");
+            const equation = document.getElementById("transEq");
+            const chartCanvas = document.getElementById("transChart");
+
+            if (!chartCanvas || !aInput || !hInput || !kInput) return;
+
+            const chart = new Chart(chartCanvas.getContext("2d"), {
+                type: "line",
+                data: {
+                    datasets: [
+                        {
+                            label: "f(x)",
+                            data: [],
+                            borderColor: "#6366f1",
+                            borderWidth: 3,
+                            pointRadius: 0,
+                            tension: 0.12,
+                            fill: false
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: { type: "linear", position: "center", min: -10, max: 10, grid: { color: "#e2e8f0" } },
+                        y: { type: "linear", position: "center", min: -10, max: 10, grid: { color: "#e2e8f0" } }
+                    },
+                    plugins: {
+                        legend: { display: false }
+                    }
+                }
+            });
+
+            function updateTransform() {
+                const a = Number(aInput.value);
+                const h = Number(hInput.value);
+                const k = Number(kInput.value);
+
+                aValue.textContent = String(a);
+                hValue.textContent = String(h);
+                kValue.textContent = String(k);
+                equation.textContent = "y = " + a + "(x - " + h + ")^2 + " + k;
+
+                const points = [];
+                for (let x = -10; x <= 10; x += 0.5) {
+                    points.push({ x: x, y: a * (x - h) * (x - h) + k });
+                }
+
+                chart.data.datasets[0].data = points;
+                chart.update("none");
+            }
+
+            [aInput, hInput, kInput].forEach(function (input) {
+                input.addEventListener("input", updateTransform);
+            });
+
+            updateTransform();
+        })();
+    </script>
+</body>
+</html>
