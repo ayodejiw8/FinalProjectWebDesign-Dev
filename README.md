@@ -5,9 +5,15 @@ Albany State University
 
 ## Contents
 Advanced Factoring 
+
 Solving Complex equations (quadratic, rational, radical) 
+
 Understanding functions (domain, range, transformations)
+
 Logarithms
+
 Systems of equations
+
 Matrices 
+
 Sequences/Series
